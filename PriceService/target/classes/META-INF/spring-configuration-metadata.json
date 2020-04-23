@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "pricing",
+      "type": "com.demo.prices.config.PlanConfig",
+      "sourceType": "com.demo.prices.config.PlanConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "pricing.plan",
+      "type": "java.util.HashMap<java.lang.String,java.math.BigDecimal>",
+      "sourceType": "com.demo.prices.config.PlanConfig"
+    }
+  ],
+  "hints": []
+}
