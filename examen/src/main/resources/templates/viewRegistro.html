@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrar::Producto</title>
+</head>
+
+<body>
+	<h1>Ingreso de datos</h1>
+	<div>
+		<form action="#" th:action="@{registroProducto}" method="post">
+			<div>
+				<label for="product_name">Nombre: </label> <input type="text"
+					th:field="*{product.product_name}" id="product_name"
+					placeholder="nombre">
+
+			</div>
+
+			<div>
+				<label for="quality_grade">Grado Calidad: </label> <select
+					id="quality_grade" th:field="*{product.quality_grade}">
+					<option value="0">Seleccione opción</option>
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+				</select>
+			</div>
+
+			<div>
+				<label>Bodega: </label> <select th:field="*{product.id_storage}">
+					<option value="0">Seleccione opción</option>
+					<option th:each="storage : ${storages}"
+						th:value="${storage.id_storage}"
+						th:utext="${storage.storage_name}" />
+				</select>
+
+			</div>
+			<div>
+
+				<label for="total_amount">Cantidad total: </label> <input
+					type="number" th:field="*{product.total_amount}" id="total_amount"
+					placeholder="Cantidad total">
+			</div>
+
+			<div>
+
+				<label for="cant_boxes">Número de cajas: </label> <input type="number"
+					min="1" th:field="*{product.cant_boxes}" id="cant_boxes"
+					placeholder="Número de cajas">
+			</div>
+			<input type="submit" value="Registrar">
+		</form>
+	</div>
+</body>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+<script
+	src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="/js/file.js"></script>
+<title>Productos::Inventario</title>
+</head>
+<body>
+	<div>
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<h1>Lista de productos</h1>
+				<h4>-</h4>
+
+				<table id="table" class="display">
+
+					<!-- Header Table -->
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Grado de calidad</th>
+							<th>Cantidad total</th>
+							<th># Cajas</th>
+							<th>Fecha de creación</th>
+							<th>Bodega</th>
+						</tr>
+					</thead>
+
+
+
+
+					<!-- Footer Table -->
+					<tfoot>
+						<tr>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Grado de calidad</th>
+							<th>Cantidad total</th>
+							<th># Cajas</th>
+							<th>Fecha de creación</th>
+							<th>Bodega</th>
+						</tr>
+					</tfoot>
+				</table>
+				<div>
+					<a class="btn btn-link" href="/">Página principal</a>
+					<a class="btn btn-link" href="/nuevo">Registrar producto</a>
+					<a class="btn btn-link" href="/listaProductos">Ver	lista de productos</a>
+				</div>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+	</div>
+</body>
+</html>
